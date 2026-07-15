@@ -1,0 +1,2357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#FFFFFF" />
+<title>Obra 10X — IA aplicada à construção civil | Amanda Moita</title>
+<meta name="description" content="O curso definitivo para profissionais de obra automatizarem a gestão do canteiro com Claude AI. 7 módulos, 25 skills prontas, acesso imediato. Por R$ 67." />
+<meta name="robots" content="index, follow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- Meta Pixel -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1288525736561572');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1288525736561572&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel -->
+
+<style>
+  :root {
+    --bg: #FFFFFF;
+    --bg-alt: #FAFAFA;
+    --bg-bege: #EFE9DF;
+    --bg-dark: #1A1A1A;
+    --ink: #1A1A1A;
+    --ink-soft: #4A4A4A;
+    --muted: #8A8A8A;
+    --line: #EAEAEA;
+    --line-dark: #2A2A2A;
+    --accent: #B85C3D;
+    --accent-soft: #F4E8E1;
+    --green: #2EA56F;
+    --white: #FFFFFF;
+    --serif: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+
+  /* Top bar */
+  .topbar {
+    padding: 14px 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    color: #FFFFFF;
+  }
+
+  /* Logo bar — abaixo do hero, antes do split */
+  .logo-bar {
+    background: var(--white);
+    padding: 56px 32px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+  }
+  .logo-bar img {
+    display: inline-block;
+    height: 64px;
+    width: auto;
+    margin-bottom: 16px;
+  }
+  .logo-bar .logo-bar-tag {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 16px;
+    color: var(--muted);
+    letter-spacing: 0.4px;
+  }
+
+  /* Logo bloco antes dos módulos */
+  .modules-logo {
+    text-align: center;
+    margin-bottom: 56px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--line);
+  }
+  .modules-logo img {
+    display: inline-block;
+    height: 104px;
+    width: auto;
+    margin-bottom: 18px;
+  }
+  .modules-logo .modules-logo-tag {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* Bloco assinatura — entre garantia e FAQ */
+  .signature-block {
+    background: var(--bg-bege);
+    padding: 80px 32px;
+    text-align: center;
+    border-top: 1px solid #DCD3C2;
+    border-bottom: 1px solid #DCD3C2;
+  }
+  .signature-block img {
+    display: inline-block;
+    height: 94px;
+    width: auto;
+    margin-bottom: 20px;
+  }
+  .signature-block p {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 580px;
+    margin: 0 auto;
+  }
+  .signature-block p strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .brand {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  .brand .sep {
+    margin: 0 10px;
+    color: rgba(255,255,255,0.4);
+    font-weight: 300;
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    width: 100%;
+    background-color: var(--bg-bege);
+    overflow: hidden;
+  }
+  .hero-photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 42%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 18%;
+    z-index: 1;
+    pointer-events: none;
+    -webkit-mask-image:
+      linear-gradient(90deg,
+        transparent 0%,
+        rgba(0,0,0,0.08) 3%,
+        rgba(0,0,0,0.28) 9%,
+        rgba(0,0,0,0.55) 16%,
+        rgba(0,0,0,0.85) 24%,
+        #000 32%
+      ),
+      linear-gradient(180deg,
+        #000 0%,
+        #000 70%,
+        rgba(0,0,0,0.4) 92%,
+        transparent 100%
+      );
+    -webkit-mask-composite: source-in;
+            mask-image:
+      linear-gradient(90deg,
+        transparent 0%,
+        rgba(0,0,0,0.08) 3%,
+        rgba(0,0,0,0.28) 9%,
+        rgba(0,0,0,0.55) 16%,
+        rgba(0,0,0,0.85) 24%,
+        #000 32%
+      ),
+      linear-gradient(180deg,
+        #000 0%,
+        #000 70%,
+        rgba(0,0,0,0.4) 92%,
+        transparent 100%
+      );
+            mask-composite: intersect;
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 3;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 88px 32px 96px;
+    display: grid;
+    grid-template-columns: minmax(0, 640px) 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 22px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  h1.headline {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: clamp(30px, 4vw, 52px);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 22px;
+  }
+  h1.headline em {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--accent);
+  }
+
+  .subhead {
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin-bottom: 32px;
+    max-width: 560px;
+  }
+
+  .hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 36px;
+    max-width: 560px;
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--ink-soft);
+  }
+  .pill::before {
+    content: "✓";
+    color: var(--green);
+    font-weight: 700;
+    font-size: 13px;
+  }
+
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--ink);
+    color: var(--white);
+    border: 1px solid var(--ink);
+    border-radius: 8px;
+    padding: 18px 32px;
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.05s ease;
+    box-shadow: 0 8px 24px -10px rgba(26,26,26,0.4);
+  }
+  .btn-primary:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--white);
+  }
+  .btn-primary:active { transform: translateY(1px); }
+  .btn-arrow { transition: transform 0.2s ease; }
+  .btn-primary:hover .btn-arrow { transform: translateX(4px); }
+
+  .price-tag {
+    display: inline-flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+  .price-tag .small {
+    font-size: 12px;
+    color: var(--muted);
+    text-decoration: line-through;
+  }
+  .price-tag .big {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .price-tag .big strong { color: var(--accent); font-weight: 600; }
+
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    align-items: center;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+  .hero-meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .hero-meta-item::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: var(--green);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(46,165,111,0.18);
+  }
+
+  /* SPLIT — dor competitiva (dois caminhos) */
+  .split {
+    background: var(--bg);
+    padding: 96px 32px;
+    border-bottom: 1px solid var(--line);
+  }
+  .split-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .split-head {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .split-head h2 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: clamp(26px, 3vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -0.018em;
+    color: var(--ink);
+    max-width: 720px;
+    margin: 14px auto 0;
+  }
+  .split-head h2 em {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--accent);
+  }
+  .split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .split-col {
+    padding: 36px 32px;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: var(--bg-alt);
+  }
+  .split-col.dark {
+    background: var(--bg-dark);
+    border-color: var(--bg-dark);
+    color: var(--white);
+  }
+  .split-col h3 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+  .split-col.faded h3 { color: #C04545; }
+  .split-col.dark h3 { color: #E89C7E; }
+  .split-col ul {
+    list-style: none;
+  }
+  .split-col li {
+    padding: 10px 0;
+    font-size: 15px;
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .split-col.dark li { border-bottom-color: rgba(255,255,255,0.08); color: rgba(255,255,255,0.85); }
+  .split-col.faded li { color: var(--ink-soft); }
+  .split-col li:last-child { border-bottom: none; }
+  .split-col li::before { flex-shrink: 0; margin-top: 2px; }
+  .split-col.faded li::before { content: "—"; color: #C04545; font-weight: 600; }
+  .split-col.dark li::before { content: "→"; color: #E89C7E; font-weight: 600; }
+
+  /* PROMESSA — banner preto após hero */
+  .promise-bar {
+    background: var(--bg-dark);
+    color: var(--white);
+    padding: 28px 32px;
+    text-align: center;
+  }
+  .promise-bar p {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(17px, 2vw, 22px);
+    line-height: 1.5;
+    max-width: 880px;
+    margin: 0 auto;
+    color: rgba(255,255,255,0.92);
+  }
+  .promise-bar p strong {
+    font-family: var(--sans);
+    font-style: normal;
+    font-weight: 600;
+    color: var(--white);
+  }
+
+  /* SECTION GENERIC */
+  section.block {
+    padding: 110px 32px;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .container-narrow {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  .section-eyebrow::before {
+    content: "";
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+  }
+  h2.section-title {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: clamp(28px, 3.4vw, 42px);
+    line-height: 1.12;
+    letter-spacing: -0.018em;
+    color: var(--ink);
+    margin-bottom: 24px;
+    max-width: 720px;
+  }
+  h2.section-title em {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--accent);
+  }
+  .section-lead {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 680px;
+    margin-bottom: 56px;
+  }
+
+  /* DOR */
+  .pain {
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .pain-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .pain-list {
+    list-style: none;
+    margin-top: 12px;
+  }
+  .pain-list li {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 16px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    position: relative;
+    padding-left: 28px;
+  }
+  .pain-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .pain-list li:last-child { border-bottom: none; }
+  .pain-list li strong { color: var(--ink); font-weight: 600; }
+
+  /* SOLUÇÃO / MÓDULOS */
+  .modules-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    border-top: 1px solid var(--line);
+  }
+  .module {
+    display: grid;
+    grid-template-columns: 80px 1fr 240px;
+    gap: 32px;
+    padding: 36px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: start;
+  }
+  .module-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 36px;
+    color: var(--accent);
+    line-height: 1;
+    padding-top: 4px;
+  }
+  .module-body h3 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.25;
+    color: var(--ink);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .module-body p.module-desc {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+  .module-body ul.module-skills {
+    list-style: none;
+    margin: 4px 0 16px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .module-body ul.module-skills li {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    padding-left: 18px;
+    position: relative;
+  }
+  .module-body ul.module-skills li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .module-body ul.module-skills li strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .module-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .tag {
+    display: inline-block;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+  }
+  .module-result {
+    background: var(--bg-alt);
+    border-left: 2px solid var(--accent);
+    padding: 14px 18px;
+    border-radius: 2px;
+  }
+  .module-result-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .module-result p {
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+
+  /* SHOWCASE — foto de projeto editorial */
+  .showcase {
+    position: relative;
+    background: var(--bg-bege);
+    overflow: hidden;
+    padding: 0;
+  }
+  .showcase-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    min-height: 540px;
+  }
+  .showcase-img {
+    position: relative;
+    overflow: hidden;
+  }
+  .showcase-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  .showcase-text {
+    padding: 96px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--bg-bege);
+  }
+  .showcase-text h2 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: clamp(28px, 3vw, 38px);
+    line-height: 1.12;
+    letter-spacing: -0.018em;
+    color: var(--ink);
+    margin-bottom: 24px;
+    max-width: 480px;
+  }
+  .showcase-text h2 em {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--accent);
+  }
+  .showcase-text p {
+    font-size: 16.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 480px;
+  }
+  .showcase-text p + p { margin-top: 14px; }
+  .showcase-text p strong { color: var(--ink); font-weight: 600; }
+  .showcase-quote {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(26,26,26,0.12);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 17px;
+    color: var(--ink);
+    max-width: 480px;
+    line-height: 1.5;
+  }
+
+  /* STACK / O QUE VOCÊ RECEBE */
+  .stack {
+    background: var(--bg-dark);
+    color: var(--white);
+  }
+  .stack h2.section-title { color: var(--white); }
+  .stack .section-eyebrow { color: #E89C7E; }
+  .stack .section-eyebrow::before { background: #E89C7E; }
+  .stack .section-lead { color: rgba(255,255,255,0.72); }
+
+  .stack-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  .stack-item {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--line-dark);
+    border-radius: 8px;
+    padding: 28px 28px 24px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+  .stack-item:hover {
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(184,92,61,0.4);
+  }
+  .stack-item-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    gap: 16px;
+  }
+  .stack-item h4 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 1.3;
+    color: var(--white);
+    letter-spacing: -0.01em;
+  }
+  .stack-item .stack-value {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 15px;
+    color: #E89C7E;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .stack-item p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.55;
+  }
+
+  .stack-total {
+    border-top: 1px solid var(--line-dark);
+    padding-top: 36px;
+    text-align: center;
+  }
+  .stack-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 480px;
+    margin: 0 auto 12px;
+    padding: 10px 0;
+    font-size: 15px;
+    color: rgba(255,255,255,0.7);
+  }
+  .stack-total-row.crossed { text-decoration: line-through; opacity: 0.5; }
+  .stack-total-row.final {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--white);
+    border-top: 1px solid var(--line-dark);
+    padding-top: 22px;
+    margin-top: 14px;
+    text-decoration: none;
+    opacity: 1;
+  }
+  .stack-total-row.final span:last-child {
+    color: #E89C7E;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 32px;
+  }
+  .stack-cta-wrap {
+    text-align: center;
+    margin-top: 40px;
+  }
+  .stack .btn-primary {
+    background: var(--white);
+    color: var(--ink);
+    border-color: var(--white);
+    box-shadow: 0 8px 32px -10px rgba(255,255,255,0.4);
+  }
+  .stack .btn-primary:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--white);
+  }
+  .stack .price-mini {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    margin-top: 14px;
+  }
+
+  /* PARA QUEM É */
+  .audience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 48px;
+  }
+  .audience-col {
+    padding: 32px;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+  }
+  .audience-col h4 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 18px;
+    letter-spacing: -0.01em;
+  }
+  .audience-col.is-for h4 { color: var(--green); }
+  .audience-col.is-not h4 { color: #C04545; }
+  .audience-col ul {
+    list-style: none;
+  }
+  .audience-col li {
+    padding: 12px 0;
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .audience-col li:last-child { border-bottom: none; }
+  .audience-col li::before {
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .audience-col.is-for li::before {
+    content: "✓";
+    color: var(--green);
+    font-weight: 700;
+  }
+  .audience-col.is-not li::before {
+    content: "✕";
+    color: #C04545;
+    font-weight: 700;
+  }
+
+  /* BIO / AUTORIDADE */
+  .bio {
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 110px 32px;
+  }
+  .bio-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 380px) 1fr;
+    gap: 72px;
+    align-items: center;
+  }
+  .bio-photo {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--bg-bege);
+  }
+  .bio-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 25%;
+  }
+  .bio h2 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: clamp(26px, 3vw, 36px);
+    line-height: 1.15;
+    letter-spacing: -0.018em;
+    color: var(--ink);
+    margin-bottom: 22px;
+    max-width: 560px;
+  }
+  .bio h2 em {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--accent);
+  }
+  .bio p {
+    font-size: 16.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 560px;
+  }
+  .bio p + p { margin-top: 14px; }
+  .bio p strong { color: var(--ink); font-weight: 600; }
+
+  /* BIO STATS */
+  .bio-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+    max-width: 560px;
+  }
+  .bio-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .bio-stat-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1;
+    color: var(--accent);
+  }
+  .bio-stat-label {
+    font-size: 12.5px;
+    line-height: 1.35;
+    color: var(--ink-soft);
+  }
+
+  /* PROVA SOCIAL — depoimentos */
+  .social-proof {
+    background: var(--bg);
+    padding: 110px 32px;
+    border-bottom: 1px solid var(--line);
+  }
+  .social-proof .container { max-width: 1100px; margin: 0 auto; }
+  .social-proof-head {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .social-proof-head h2 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: clamp(26px, 3vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -0.018em;
+    color: var(--ink);
+    max-width: 720px;
+    margin: 14px auto 0;
+  }
+  .social-proof-head h2 em {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--accent);
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .testimonial {
+    background: var(--bg-alt);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 28px 28px 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonial.featured {
+    grid-column: span 2;
+    background: var(--accent-soft);
+    border-color: #E8D4C8;
+  }
+  .testimonial-stars {
+    color: #E8A93D;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+  }
+  .testimonial p {
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: var(--ink);
+    margin-bottom: 22px;
+    flex-grow: 1;
+  }
+  .testimonial.featured p {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 1.55;
+  }
+  .testimonial p strong {
+    background: linear-gradient(180deg, transparent 60%, rgba(184,92,61,0.18) 60%);
+    font-weight: 600;
+  }
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+  }
+  .testimonial.featured .testimonial-author { border-top-color: #E8D4C8; }
+  .testimonial-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 15px;
+    flex-shrink: 0;
+    letter-spacing: 0.5px;
+  }
+  .testimonial-meta {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+  }
+  .testimonial-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--ink);
+  }
+  .testimonial-role {
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* GARANTIA */
+  .guarantee {
+    background: var(--bg);
+    text-align: center;
+  }
+  .guarantee-card {
+    max-width: 720px;
+    margin: 0 auto;
+    background: var(--accent-soft);
+    border-radius: 12px;
+    padding: 56px 40px;
+    border: 1px solid #E8D4C8;
+  }
+  .guarantee-seal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 2px solid var(--accent);
+    margin-bottom: 24px;
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1.05;
+    text-align: center;
+    font-size: 14px;
+  }
+  .guarantee h2 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: clamp(24px, 2.6vw, 32px);
+    margin-bottom: 16px;
+    letter-spacing: -0.018em;
+  }
+  .guarantee h2 em {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--accent);
+  }
+  .guarantee p {
+    font-size: 16px;
+    color: var(--ink-soft);
+    line-height: 1.7;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  /* FAQ */
+  .faq-list {
+    margin-top: 40px;
+    border-top: 1px solid var(--line);
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--line);
+  }
+  .faq-q {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 24px 0;
+    font-family: var(--sans);
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--ink);
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    line-height: 1.4;
+  }
+  .faq-q::after {
+    content: "+";
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 28px;
+    color: var(--accent);
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+  .faq-item.open .faq-q::after {
+    content: "–";
+  }
+  .faq-a {
+    display: none;
+    padding: 0 0 28px;
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 720px;
+  }
+  .faq-item.open .faq-a {
+    display: block;
+  }
+
+  /* CTA FINAL */
+  .final-cta {
+    background: var(--bg-dark);
+    color: var(--white);
+    text-align: center;
+  }
+  .final-cta h2 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: clamp(28px, 3.6vw, 44px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    margin-bottom: 20px;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .final-cta h2 em {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    color: #E89C7E;
+  }
+  .final-cta .lead {
+    font-size: 17px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.7);
+    max-width: 600px;
+    margin: 0 auto 36px;
+  }
+  .final-cta .btn-primary {
+    background: var(--white);
+    color: var(--ink);
+    border-color: var(--white);
+    padding: 20px 40px;
+    font-size: 17px;
+    box-shadow: 0 12px 40px -12px rgba(255,255,255,0.4);
+  }
+  .final-cta .btn-primary:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--white);
+  }
+  .final-cta .small {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 18px;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 32px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    background: var(--bg);
+  }
+  footer a { color: var(--ink-soft); }
+
+  /* ============== RESPONSIVO ============== */
+
+  @media (max-width: 1100px) {
+    .hero-inner {
+      padding: 64px 28px 80px;
+      grid-template-columns: minmax(0, 540px) 1fr;
+      gap: 32px;
+    }
+    section.block { padding: 88px 28px; }
+    .pain-grid { gap: 48px; }
+    .module { grid-template-columns: 64px 1fr 200px; gap: 24px; }
+  }
+
+  @media (max-width: 900px) {
+    .hero-photo { width: 40%; object-position: 50% 18%; }
+    .hero-inner {
+      grid-template-columns: minmax(0, 460px) 1fr;
+      gap: 16px;
+      padding: 48px 24px 64px;
+    }
+
+    .pain-grid { grid-template-columns: 1fr; gap: 32px; }
+    .stack-grid { grid-template-columns: 1fr; }
+    .audience-grid { grid-template-columns: 1fr; }
+
+    .showcase-inner { grid-template-columns: 1fr; min-height: 0; }
+    .showcase-img { aspect-ratio: 4 / 3; }
+    .showcase-text { padding: 64px 32px; }
+
+    .split { padding: 64px 20px; }
+    .split-grid { grid-template-columns: 1fr; gap: 16px; }
+    .split-col { padding: 28px 22px; }
+
+    .modules-logo { margin-bottom: 40px; padding-bottom: 28px; }
+    .modules-logo img { height: 142px; margin-bottom: 14px; }
+
+    .signature-block { padding: 56px 20px; }
+    .signature-block img { height: 142px; }
+    .signature-block p { font-size: 16px; }
+
+    .bio-stats {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 28px;
+      padding-top: 22px;
+    }
+    .bio-stat-num { font-size: 22px; }
+    .bio-stat-label { font-size: 11.5px; }
+
+    .social-proof { padding: 64px 20px; }
+    .social-proof-head { margin-bottom: 40px; }
+    .testimonials-grid { grid-template-columns: 1fr; gap: 14px; }
+    .testimonial { padding: 22px 20px; }
+    .testimonial.featured { grid-column: span 1; }
+    .testimonial.featured p { font-size: 17px; }
+    .testimonial p { font-size: 14.5px; }
+
+    .module {
+      grid-template-columns: 56px 1fr;
+      gap: 18px;
+    }
+    .module-result {
+      grid-column: 1 / -1;
+      margin-top: 8px;
+    }
+
+    .bio { padding: 80px 28px; }
+    .bio-inner {
+      grid-template-columns: minmax(0, 280px) 1fr;
+      gap: 48px;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .hero {
+      min-height: 760px;
+      display: flex;
+      align-items: stretch;
+    }
+    .hero-photo {
+      width: 58%;
+      object-position: 42% 22%;
+      -webkit-mask-image:
+        linear-gradient(90deg,
+          transparent 0%,
+          rgba(0,0,0,0.005) 8%,
+          rgba(0,0,0,0.06) 24%,
+          rgba(0,0,0,0.26) 40%,
+          rgba(0,0,0,0.60) 56%,
+          rgba(0,0,0,0.85) 72%,
+          #000 84%
+        ),
+        linear-gradient(180deg,
+          #000 0%,
+          #000 70%,
+          rgba(0,0,0,0.4) 92%,
+          transparent 100%
+        );
+      -webkit-mask-composite: source-in;
+              mask-image:
+        linear-gradient(90deg,
+          transparent 0%,
+          rgba(0,0,0,0.005) 8%,
+          rgba(0,0,0,0.06) 24%,
+          rgba(0,0,0,0.26) 40%,
+          rgba(0,0,0,0.60) 56%,
+          rgba(0,0,0,0.85) 72%,
+          #000 84%
+        ),
+        linear-gradient(180deg,
+          #000 0%,
+          #000 70%,
+          rgba(0,0,0,0.4) 92%,
+          transparent 100%
+        );
+              mask-composite: intersect;
+    }
+    .hero-inner {
+      grid-template-columns: 1fr;
+      padding: 32px 20px 48px;
+      gap: 0;
+      width: 100%;
+    }
+    .hero-copy { max-width: 64%; }
+
+    .eyebrow { font-size: 11px; letter-spacing: 1.2px; margin-bottom: 14px; }
+    .eyebrow::before { width: 16px; }
+
+    h1.headline {
+      font-size: 28px;
+      line-height: 1.08;
+      margin-bottom: 14px;
+    }
+    .subhead {
+      font-size: 14.5px;
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+    .hero-pills {
+      max-width: 100%;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+    .pill { font-size: 11px; padding: 6px 10px; background: rgba(255,255,255,0.85); }
+    .cta-row { flex-direction: column; align-items: stretch; gap: 10px; }
+    .btn-primary { width: 100%; padding: 16px 20px; font-size: 15px; }
+    .price-tag .big { font-size: 18px; }
+    .hero-meta { font-size: 12px; gap: 14px; }
+
+    section.block { padding: 64px 20px; }
+    h2.section-title { font-size: clamp(24px, 6vw, 30px); }
+    .section-lead { font-size: 15.5px; margin-bottom: 36px; }
+
+    .module {
+      padding: 28px 0;
+      grid-template-columns: 48px 1fr;
+      gap: 14px;
+    }
+    .module-num { font-size: 28px; }
+    .module-body h3 { font-size: 18px; }
+    .module-body p.module-desc { font-size: 14px; }
+    .tag { font-size: 11px; padding: 3px 8px; }
+
+    .stack { padding: 64px 20px; }
+    .stack-item { padding: 22px 20px; }
+    .stack-item-head { flex-direction: column; gap: 6px; }
+    .stack-total-row { font-size: 14px; padding: 8px 0; }
+    .stack-total-row.final { font-size: 18px; }
+    .stack-total-row.final span:last-child { font-size: 26px; }
+
+    .bio { padding: 56px 20px; }
+    .bio-inner {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .bio-photo {
+      max-width: 280px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .guarantee-card { padding: 40px 24px; }
+    .guarantee-seal { width: 70px; height: 70px; font-size: 12px; }
+
+    .faq-q { font-size: 15.5px; padding: 20px 0; gap: 16px; }
+    .faq-a { font-size: 14.5px; padding-bottom: 22px; }
+
+    .final-cta { padding: 64px 20px; }
+    .final-cta h2 { font-size: 26px; }
+    .final-cta .lead { font-size: 15px; margin-bottom: 28px; }
+    .final-cta .btn-primary { padding: 17px 28px; font-size: 15.5px; }
+  }
+
+  @media (max-width: 480px) {
+    .hero { min-height: 720px; }
+    .hero-photo { width: 56%; }
+    .hero-copy { max-width: 58%; }
+    h1.headline { font-size: 24px; }
+    .topbar { padding: 12px 18px; }
+    .brand { font-size: 11.5px; letter-spacing: 1.3px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+</style>
+
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">Curso Obra 10X <span class="sep">|</span> Acesso Imediato</div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <img class="hero-photo" src="amanda3.JPG" alt="Amanda Moita, criadora do Obra 10X" />
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">Obra 10X · Curso completo</span>
+
+      <h1 class="headline">
+        Automatize a gestão da sua obra com IA e ganhe <em>10 horas</em> por semana.
+      </h1>
+
+      <p class="subhead">
+        7 módulos práticos + 25 skills prontas pra você instalar no Claude
+        e transformar canteiro de obra em escritório digital.
+      </p>
+
+      <div class="hero-pills">
+        <span class="pill">Acesso imediato</span>
+        <span class="pill">1 ano de acesso</span>
+        <span class="pill">7 dias de garantia</span>
+        <span class="pill">No seu ritmo</span>
+      </div>
+
+      <div class="cta-row">
+        <a href="https://pay.hotmart.com/A105554478E?checkoutMode=10&amp;bid=1778612544030" class="btn-primary" data-checkout="true" target="_blank" rel="noopener">
+          Quero meu acesso imediato
+          <span class="btn-arrow">&rarr;</span>
+        </a>
+        <div class="price-tag">
+          <span class="small">De R$ 297</span>
+          <span class="big">por <strong>R$ 67</strong> à vista</span>
+        </div>
+      </div>
+
+      <div class="hero-meta">
+        <span class="hero-meta-item">Pagamento único</span>
+        <span class="hero-meta-item">Sem mensalidade</span>
+      </div>
+    </div>
+
+    <div aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ============ PROMESSA ============ -->
+<div class="promise-bar">
+  <p>
+    Você não precisa <strong>trocar MS Project, Primavera ou Excel</strong>.
+    Não precisa virar especialista em IA. Em uma tarde, sua gestão de obra passa a operar com sistema de gente grande.
+  </p>
+</div>
+
+<!-- ============ SPLIT — DOR COMPETITIVA ============ -->
+<section class="split">
+  <div class="split-inner">
+    <div class="split-head">
+      <span class="section-eyebrow" style="display:inline-flex;">O mercado em 12 meses</span>
+      <h2>O mercado de construção civil está se dividindo em <em>dois grupos</em>. Você decide em qual vai estar.</h2>
+    </div>
+
+    <div class="split-grid">
+      <div class="split-col faded">
+        <h3>O grupo que vai ficar pra trás</h3>
+        <ul>
+          <li>Refaz cronograma toda vez que muda o escopo.</li>
+          <li>Perde noites atualizando diário de obra.</li>
+          <li>Orçamento sempre estoura por erro de quantitativo.</li>
+          <li>Perde concorrência pra construtora 3x mais rápida.</li>
+          <li>Acha que IA é coisa de TI — e descobre tarde demais que não era.</li>
+        </ul>
+      </div>
+      <div class="split-col dark">
+        <h3>O grupo que sai na frente</h3>
+        <ul>
+          <li>Cronograma atualizado em minutos, não em dias.</li>
+          <li>Diário de obra e medições numa tarde.</li>
+          <li>Orçamento detalhado com BDI calculado pela IA.</li>
+          <li>Entrega proposta comercial em 48h.</li>
+          <li>Tem fim de semana de volta — sem perder qualidade técnica.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOR ============ -->
+<section class="block pain">
+  <div class="container">
+    <div class="pain-grid">
+      <div>
+        <span class="section-eyebrow">Pra quem se reconhece nisso</span>
+        <h2 class="section-title">
+          Você trabalha com obra, mas <em>perde horas do seu dia</em> com burocracias técnicas.
+        </h2>
+        <p class="section-lead">
+          Cronograma, medição, diário de obra, orçamento, contrato, laudo técnico.
+          Toda semana, praticamente do zero. E sobra cada vez menos tempo pro que você realmente foi formado pra fazer:
+          <strong>tocar obra.</strong>
+        </p>
+      </div>
+
+      <ul class="pain-list">
+        <li>Você <strong>refaz planilha de medição</strong> toda semana, praticamente do zero.</li>
+        <li>Já tentou ChatGPT, mas <strong>ele inventa norma técnica e composição de custo</strong>.</li>
+        <li><strong>Diário de obra sempre atrasado</strong> — e você sabe o risco que isso representa.</li>
+        <li>Trabalha sábado e feriado pra <strong>dar conta do cronograma</strong>.</li>
+        <li>Cobra pouco porque <strong>demora demais no orçamento</strong> &mdash; e não consegue escalar.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOLUÇÃO / O QUE É ============ -->
+<section class="block">
+  <div class="container">
+    <span class="section-eyebrow">A solução</span>
+    <h2 class="section-title">
+      Um <em>sistema</em> de IA pensado por quem vive obra, pra quem toca obra.
+    </h2>
+    <p class="section-lead">
+      Obra 10X é um curso prático de <strong>7 módulos</strong> que monta o seu escritório
+      digital de obra dentro do Claude. Você instala 25 skills feitas pra fluxos reais de construção civil &mdash;
+      da proposta ao laudo técnico &mdash; e nunca mais começa um documento do zero.
+    </p>
+
+    <div class="modules-logo">
+      <img src="logo-obra10x.png" alt="Obra 10X" />
+      <div class="modules-logo-tag">O sistema completo · 7 módulos · 25 skills</div>
+    </div>
+
+    <div class="modules-grid">
+      <article class="module">
+        <div class="module-num">00</div>
+        <div class="module-body">
+          <h3>Fundação — seu kit de IA</h3>
+          <p class="module-desc">
+            Em 1 hora você instala o Claude e domina os 4 pilares — Projetos, Skills, Artefatos e Conectores — sabendo o que nunca subir no chat.
+          </p>
+          <div class="module-tags">
+            <span class="tag">Setup</span>
+            <span class="tag">Segurança</span>
+            <span class="tag">+ Bônus WhisperFlow</span>
+          </div>
+        </div>
+        <div class="module-result">
+          <div class="module-result-label">Resultado</div>
+          <p>Ambiente funcional em 1h. Sem dúvida do que clicar onde.</p>
+        </div>
+      </article>
+
+      <article class="module">
+        <div class="module-num">01</div>
+        <div class="module-body">
+          <h3>Projeto Master — seu escritório digital de obra</h3>
+          <p class="module-desc">
+            Você monta a estrutura central da gestão de obra dentro do Claude e instala as 25 skills de construção civil — com template duplicável pra cada obra nova.
+          </p>
+          <div class="module-tags">
+            <span class="tag">25 skills</span>
+            <span class="tag">Template duplicável</span>
+          </div>
+        </div>
+        <div class="module-result">
+          <div class="module-result-label">Resultado</div>
+          <p>Um sistema instalado, pronto pra rodar em qualquer projeto.</p>
+        </div>
+      </article>
+
+      <article class="module">
+        <div class="module-num">02</div>
+        <div class="module-body">
+          <h3>Obra nova — da proposta ao contrato</h3>
+          <p class="module-desc">
+            Lead na segunda, contrato na sexta. As 4 skills deste módulo trabalham em sequência dentro do Projeto-Cliente:
+          </p>
+          <ul class="module-skills">
+            <li><strong>Nova Obra</strong> — registra os dados essenciais do cliente em 5 minutos, num card estruturado, antes mesmo do briefing formal.</li>
+            <li><strong>Briefing com Cliente</strong> — conduz uma entrevista estruturada cobrindo escopo, restrições técnicas, prazo e orçamento.</li>
+            <li><strong>Gerador de Contrato</strong> — transforma o briefing aprovado em contrato completo de prestação de serviços, com escopo, prazo e cláusulas.</li>
+            <li><strong>Proposta Comercial</strong> — gera proposta profissional com escopo detalhado, cronograma e condições comerciais prontas pra enviar ao cliente.</li>
+          </ul>
+        </div>
+        <div class="module-result">
+          <div class="module-result-label">Resultado</div>
+          <p>Cliente fechado com documentação profissional em 48h.</p>
+        </div>
+      </article>
+
+      <article class="module">
+        <div class="module-num">03</div>
+        <div class="module-body">
+          <h3>Planejamento — do escopo ao cronograma</h3>
+          <p class="module-desc">
+            A fase em que a obra realmente nasce. As 4 skills deste módulo trabalham dentro do Projeto-Cliente:
+          </p>
+          <ul class="module-skills">
+            <li><strong>Análise de Projeto</strong> — relatório técnico de condicionantes a partir dos projetos, especificações e condições do terreno.</li>
+            <li><strong>EAP Automática</strong> — transforma o escopo em estrutura analítica do projeto, com pacotes de trabalho, entregas e responsáveis.</li>
+            <li><strong>Cronograma Executivo</strong> — gera cronograma detalhado com predecessoras, durações e caminho crítico a partir da EAP.</li>
+            <li><strong>Logística de Canteiro</strong> — define layout do canteiro, fluxos de material, áreas de vivência e armazenamento conforme NR-18.</li>
+          </ul>
+        </div>
+        <div class="module-result">
+          <div class="module-result-label">Resultado</div>
+          <p>Planejamento robusto e defensável antes da primeira concretagem.</p>
+        </div>
+      </article>
+
+      <article class="module">
+        <div class="module-num">04</div>
+        <div class="module-body">
+          <h3>Documentação técnica em minutos</h3>
+          <p class="module-desc">
+            <strong>O módulo de maior valor percebido</strong> — onde a economia de 10h/sem acontece. As 6 skills deste módulo:
+          </p>
+          <ul class="module-skills">
+            <li><strong>Diário de Obra</strong> — gera o diário completo com registro de atividades, mão de obra, equipamentos, clima e ocorrências do dia.</li>
+            <li><strong>Medições</strong> — aprofunda o avanço físico por etapa: quantidades executadas, percentuais acumulados e comparativo com o planejado.</li>
+            <li><strong>Relatório de Avanço</strong> — XLSX com fórmulas vivas, organizado por pacote de trabalho, com previsto vs. realizado e desvios.</li>
+            <li><strong>Orçamento Detalhado</strong> — aplica composição de custos sobre o quantitativo item a item, com insumos, mão de obra e BDI.</li>
+            <li><strong>Memorial de Cálculo</strong> — converte o que já foi documentado pra linguagem técnica de memória de cálculo, adaptado às normas ABNT.</li>
+            <li><strong>Laudo Técnico</strong> — registro datado e numerado com fotos, decisões, pendências e prazos. É o que protege você juridicamente.</li>
+          </ul>
+        </div>
+        <div class="module-result">
+          <div class="module-result-label">Resultado</div>
+          <p>10h por semana de volta &mdash; só esse módulo já paga o curso 100x.</p>
+        </div>
+      </article>
+
+      <article class="module">
+        <div class="module-num">05</div>
+        <div class="module-body">
+          <h3>Orçamento — do quantitativo ao BDI</h3>
+          <p class="module-desc">
+            O módulo que transforma orçamento em vantagem competitiva. As 4 skills deste módulo:
+          </p>
+          <ul class="module-skills">
+            <li><strong>Levantamento Quantitativo</strong> — gera quantitativos detalhados a partir do projeto, organizados por etapa e serviço.</li>
+            <li><strong>Composição de Custos</strong> — monta composições unitárias com insumos, coeficientes e produtividade baseados em SINAPI/TCPO.</li>
+            <li><strong>Curva ABC</strong> — classifica os itens por representatividade no custo total, destacando onde concentrar negociação e controle.</li>
+            <li><strong>BDI e Preço Final</strong> — calcula BDI com todos os componentes (administração, lucro, impostos) e gera o preço de venda.</li>
+          </ul>
+        </div>
+        <div class="module-result">
+          <div class="module-result-label">Resultado</div>
+          <p>Orçamento que fecha conta e ganha concorrência.</p>
+        </div>
+      </article>
+
+      <article class="module">
+        <div class="module-num">06</div>
+        <div class="module-body">
+          <h3>Conformidade e compatibilização</h3>
+          <p class="module-desc">
+            A blindagem técnica do projeto. As 4 skills deste módulo vivem na sua Biblioteca Técnica permanente:
+          </p>
+          <ul class="module-skills">
+            <li><strong>Verificador NR-18</strong> — varredura ponto a ponto de segurança do trabalho: condições do canteiro, EPIs, proteções coletivas, sinalização.</li>
+            <li><strong>Verificador PBQP-H</strong> — cruza documentação e processos com requisitos do Programa Brasileiro de Qualidade e Produtividade do Habitat.</li>
+            <li><strong>Normas ABNT</strong> — confronta o projeto e a execução com as normas técnicas aplicáveis: estrutura, instalações, impermeabilização.</li>
+            <li><strong>Check-list de Entrega</strong> — confronta o executado com o projetado antes da entrega ao cliente, evitando retrabalho e pendências.</li>
+          </ul>
+        </div>
+        <div class="module-result">
+          <div class="module-result-label">Resultado</div>
+          <p>Obra entregue conforme, sem retrabalho.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHOWCASE / VISUAL ============ -->
+<section class="showcase">
+  <div class="showcase-inner">
+    <div class="showcase-img">
+      <img src="projeto.jpg" alt="Projeto residencial assinado por Amanda Moita" loading="lazy" />
+    </div>
+    <div class="showcase-text">
+      <span class="section-eyebrow">Por quem vive obra, pra quem toca obra</span>
+      <h2>O <em>passo a passo completo</em> pronto para usar.</h2>
+      <p>
+        Cada skill do curso foi extraída do passo a passo real de obras residenciais e comerciais.
+        <strong>Não é teoria de IA aplicada à construção civil.</strong>
+        É o fluxo validado no canteiro, agora documentado pra você instalar em uma tarde.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STACK / OFERTA ============ -->
+<section class="block stack" id="oferta">
+  <div class="container">
+    <span class="section-eyebrow">Tudo o que você recebe</span>
+    <h2 class="section-title">
+      Um pacote que <em>seria caro</em> &mdash; mas o objetivo aqui é colocar IA na mão de cada profissional de obra do Brasil.
+    </h2>
+    <p class="section-lead">
+      Por isso o Obra 10X sai por <strong>R$ 67 à vista</strong>. Sem mensalidade, sem upsell,
+      sem letra miúda. Você paga uma vez, fica com o sistema pra sempre.
+    </p>
+
+    <div class="stack-grid">
+      <div class="stack-item">
+        <div class="stack-item-head">
+          <h4>Curso Obra 10X completo</h4>
+          <span class="stack-value">R$ 297</span>
+        </div>
+        <p>7 módulos do zero ao avançado, 100% em vídeo, gravados e organizados pra consumir no seu ritmo. 1 ano de acesso.</p>
+      </div>
+
+      <div class="stack-item">
+        <div class="stack-item-head">
+          <h4>Kit com 25 skills de construção civil</h4>
+          <span class="stack-value">R$ 497</span>
+        </div>
+        <p>Briefing, contrato, diário de obra, medições, orçamento, NR-18, PBQP-H, laudo técnico — instalação em 1 clique.</p>
+      </div>
+
+      <div class="stack-item">
+        <div class="stack-item-head">
+          <h4>Template Obra-Cliente duplicável</h4>
+          <span class="stack-value">R$ 97</span>
+        </div>
+        <p>Estrutura central da gestão de obra dentro do Claude. Configura uma vez, duplica pra cada obra nova.</p>
+      </div>
+
+      <div class="stack-item">
+        <div class="stack-item-head">
+          <h4>Bônus: WhisperFlow (vistoria por voz)</h4>
+          <span class="stack-value">R$ 47</span>
+        </div>
+        <p>Como ditar vistoria ao vivo no canteiro em vez de digitar. Registros 3x mais rápidos, anotações automáticas.</p>
+      </div>
+
+      <div class="stack-item">
+        <div class="stack-item-head">
+          <h4>Bônus: Biblioteca Técnica SINAPI/TCPO</h4>
+          <span class="stack-value">R$ 67</span>
+        </div>
+        <p>Verificadores de NR e normas ABNT já configurados pra rodar conformidade sem você abrir norma manual.</p>
+      </div>
+    </div>
+
+    <div class="stack-total">
+      <div class="stack-total-row crossed">
+        <span>Valor total se comprado separado</span>
+        <span>R$ 1.005</span>
+      </div>
+      <div class="stack-total-row final">
+        <span>Hoje, à vista</span>
+        <span>R$ 67</span>
+      </div>
+
+      <div class="stack-cta-wrap">
+        <a href="https://pay.hotmart.com/A105554478E?checkoutMode=10&amp;bid=1778612544030" class="btn-primary" data-checkout="true" target="_blank" rel="noopener">
+          Quero o Obra 10X agora
+          <span class="btn-arrow">&rarr;</span>
+        </a>
+        <p class="price-mini">Pagamento único · Acesso imediato · 7 dias de garantia incondicional</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARA QUEM É ============ -->
+<section class="block">
+  <div class="container">
+    <span class="section-eyebrow">Antes de comprar</span>
+    <h2 class="section-title">
+      É <em>pra você</em>? Veja com sinceridade.
+    </h2>
+
+    <div class="audience-grid">
+      <div class="audience-col is-for">
+        <h4>É pra você se…</h4>
+        <ul>
+          <li>Você trabalha com construção civil (engenheiro, mestre, técnico), formado ou recém-formado.</li>
+          <li>Já abriu ChatGPT ou Claude, mas usa só como Google melhorado.</li>
+          <li>Sente que perde 10h+ por semana refazendo documento técnico.</li>
+          <li>Quer um sistema que funcione amanhã, não daqui a 6 meses.</li>
+          <li>Está disposto a dedicar uma tarde pra montar a estrutura.</li>
+        </ul>
+      </div>
+      <div class="audience-col is-not">
+        <h4>NÃO é pra você se…</h4>
+        <ul>
+          <li>Você procura curso de MS Project ou Primavera — não é nosso foco.</li>
+          <li>Quer que a IA toque a obra sozinha &mdash; isso ainda não existe.</li>
+          <li>Não está disposto a aplicar nem 1 skill na primeira semana.</li>
+          <li>Espera substituir conhecimento técnico por automação.</li>
+          <li>Acha que IA é coisa de TI.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BIO ============ -->
+<section class="bio" id="sobre">
+  <div class="bio-inner">
+    <div class="bio-photo">
+      <img src="amanda.JPG" alt="Amanda Moita, arquiteta e urbanista" />
+    </div>
+    <div>
+      <span class="section-eyebrow">Quem ensina</span>
+      <h2>A profissional por trás do <em>método</em>.</h2>
+      <p>
+        Amanda Moita é arquiteta e urbanista formada pela <strong>Universidade Federal do Piauí</strong> (2015),
+        com mestrado nos Estados Unidos e cinco anos atuando em projetos residenciais e corporativos
+        em <strong>Manhattan</strong>.
+      </p>
+      <p>
+        De volta ao Brasil, transformou o passo a passo de um projeto arquitetônico em um método validado com IA &mdash;
+        que devolve <strong>pelo menos 10 horas por semana</strong> ao escritório de qualquer profissional que aplica.
+      </p>
+      <p>
+        Hoje ensina profissionais de obra do Brasil inteiro a operar com IA de forma séria, sem misticismo
+        e sem trocar de software. <strong>Esse é o curso que ela queria ter feito quando voltou de Nova York.</strong>
+        Criou o método 10X para automatizar processos técnicos com IA — agora adaptado para a realidade da construção civil brasileira.
+      </p>
+
+      <div class="bio-stats" style="grid-template-columns: repeat(2, 1fr); max-width: 420px;">
+        <div class="bio-stat">
+          <span class="bio-stat-num">10h<span style="font-size:.55em;">/sem</span></span>
+          <span class="bio-stat-label">economizadas em média na gestão de obra</span>
+        </div>
+        <div class="bio-stat">
+          <span class="bio-stat-num">5 anos</span>
+          <span class="bio-stat-label">projetos residenciais em Manhattan</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROVA SOCIAL ============ -->
+<section class="social-proof">
+  <div class="container">
+    <div class="social-proof-head">
+      <span class="section-eyebrow" style="display:inline-flex;">Quem já aplicou</span>
+      <h2>Profissionais que pararam de <em>trabalhar no fim de semana</em> com o método.</h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <article class="testimonial featured">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>
+          &ldquo;Apliquei só o módulo 5 e <strong>economizei 8 horas no primeiro projeto</strong>. Em duas semanas, paguei o curso 100x — só de não ter que terceirizar os 3Ds do meu projeto.&rdquo;
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">CM</div>
+          <div class="testimonial-meta">
+            <span class="testimonial-name">Carolina Mendes</span>
+            <span class="testimonial-role">Arquiteta · São Paulo / SP</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>
+          &ldquo;Eu já tinha tentado ChatGPT pra memorial e ele inventava norma. Com a skill da Amanda, agora <strong>passa direto na conferência da prefeitura</strong> e eu reviso em 20 minutos. Outro nível.&rdquo;
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:#3D6AB8;">RA</div>
+          <div class="testimonial-meta">
+            <span class="testimonial-name">Rafael Aguiar</span>
+            <span class="testimonial-role">Escritório próprio · Curitiba / PR</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>
+          &ldquo;Sou recém-formada e o curso me deu uma estrutura de escritório que <strong>colega com 10 anos de profissão não tem</strong>. O briefing inteligente já fechou meu primeiro contrato bem precificado.&rdquo;
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:#2EA56F;">JV</div>
+          <div class="testimonial-meta">
+            <span class="testimonial-name">Juliana Vasconcelos</span>
+            <span class="testimonial-role">Arquiteta recém-formada · Recife / PE</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>
+          &ldquo;Achei que era curso de IA básico. Não é. É o <strong>passo a passo do escritório</strong> traduzido pra IA. Em uma tarde montei o sistema, em uma semana já tinha aplicado em 3 clientes.&rdquo;
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:#8C5BB5;">PH</div>
+          <div class="testimonial-meta">
+            <span class="testimonial-name">Patrícia Hauser</span>
+            <span class="testimonial-role">Arquiteta de interiores · Florianópolis / SC</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>
+          &ldquo;O orçamento por ambiente sozinho já vale o curso. <strong>O cliente toma a decisão na primeira reunião</strong> porque vê o escopo cômodo a cômodo. Fechei dois projetos extras esse mês.&rdquo;
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:#B8893D;">MS</div>
+          <div class="testimonial-meta">
+            <span class="testimonial-name">Marina Santiago</span>
+            <span class="testimonial-role">Estúdio Santiago Arquitetura · Belo Horizonte / MG</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GARANTIA ============ -->
+<section class="block guarantee">
+  <div class="guarantee-card">
+    <div class="guarantee-seal">7 DIAS<br>GARANTIA</div>
+    <h2>O risco é <em>todo meu</em>.</h2>
+    <p>
+      Compre, assista, aplique. Se em 7 dias você sentir que o Obra 10X não cumpre o que prometi,
+      me responde no e-mail e eu devolvo 100% &mdash; sem pergunta, sem letra miúda. Você fica com o que aprendeu.
+      <br><br>
+      <strong>Se R$ 67 vai pesar caso não funcione, eu prefiro que sobre no seu bolso.</strong>
+    </p>
+
+    <div style="margin-top:36px;">
+      <a href="https://pay.hotmart.com/A105554478E?checkoutMode=10&amp;bid=1778612544030" class="btn-primary" data-checkout="true" target="_blank" rel="noopener">
+        Ok, com risco zero eu entro
+        <span class="btn-arrow">&rarr;</span>
+      </a>
+      <p style="font-size:13px;color:var(--muted);margin-top:14px;">
+        <span style="text-decoration:line-through;opacity:.6;margin-right:6px;">R$ 297</span>R$ 67 à vista · 7 dias de garantia
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ASSINATURA ============ -->
+<section class="signature-block">
+  <img src="logo-obra10x.png" alt="Obra 10X" />
+  <p>O sistema que <strong>devolve 10 horas por semana</strong> à sua gestão de obra &mdash; pensado por quem vive obra, pra quem toca obra.</p>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="block">
+  <div class="container-narrow">
+    <span class="section-eyebrow">Dúvidas frequentes</span>
+    <h2 class="section-title">
+      Tudo que você precisa saber <em>antes</em> de clicar comprar.
+    </h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" type="button">Eu preciso saber alguma coisa de IA pra começar?</button>
+        <div class="faq-a">
+          <p>Não. O Módulo 0 começa do absoluto zero — instalação, interface, o que clicar. Se você
+          já abriu ChatGPT alguma vez, está mais que pronto. Em 1 hora você sai com Claude funcionando
+          no seu computador.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">Vou precisar trocar o MS Project ou Excel?</button>
+        <div class="faq-a">
+          <p>Não. O curso é sobre <strong>tudo que vem antes e depois</strong> do planejamento:
+          proposta, diário de obra, medição, orçamento, contrato, laudo técnico.
+          Suas ferramentas de planejamento continuam iguais.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">A IA não inventa norma e composição de custo?</button>
+        <div class="faq-a">
+          <p>Inventa, sim — quando você usa de qualquer jeito. As skills do Obra 10X foram feitas
+          justamente pra forçar verificação humana e cruzamento com SINAPI e TCPO. Ensinamos
+          os checklists técnicos no Módulo 6.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">Quanto tempo leva pra terminar o curso?</button>
+        <div class="faq-a">
+          <p>Você pode aplicar a primeira skill em 1 hora. O curso completo dá pra consumir em
+          <strong>1 fim de semana</strong> ou em 2 semanas no seu ritmo. Você tem 1 ano de acesso
+          pra revisitar.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">Tem mensalidade ou cobrança recorrente?</button>
+        <div class="faq-a">
+          <p>Não. Pagamento <strong>único</strong> de R$ 67. Sem mensalidade, sem upsell automático,
+          sem renovação escondida.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">Como funciona a garantia?</button>
+        <div class="faq-a">
+          <p>7 dias de garantia incondicional. Em qualquer momento dos 7 dias após a compra, basta
+          mandar um e-mail e devolvemos 100% — sem precisar justificar nada.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">Eu sou recém-formado, ainda vale?</button>
+        <div class="faq-a">
+          <p>Vale especialmente. Engenheiros recém-formados são os que mais ganham velocidade. Você economiza os 5 anos que a maioria leva pra montar o sistema
+          interno de gestão no método antigo — começa já operando como gente grande.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">Funciona pra reforma e obra pequena?</button>
+        <div class="faq-a">
+          <p>Sim. As skills servem desde reforma residencial até obra comercial de médio porte.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">Preciso pagar pelo Claude separado?</button>
+        <div class="faq-a">
+          <p>O Claude tem versão gratuita que já roda boa parte das skills. Pra uso intensivo,
+          recomendo o plano pago do Claude (~$20/mês), mas isso é opcional e independe do curso.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="block final-cta">
+  <div class="container-narrow">
+    <h2>
+      Sua próxima semana pode ser <em>10 horas mais leve</em>. Decisão é sua.
+    </h2>
+    <p class="lead">
+      Por R$ 67, você instala em uma tarde o sistema que engenheiros e mestres de obra do Brasil inteiro estão usando pra
+      parar de trabalhar no fim de semana. Acesso imediato. 7 dias de garantia. Sem pegadinha.
+    </p>
+    <a href="https://pay.hotmart.com/A105554478E?checkoutMode=10&amp;bid=1778612544030" class="btn-primary" data-checkout="true" target="_blank" rel="noopener">
+      Quero meu acesso agora &rarr;
+    </a>
+    <p class="small"><span style="text-decoration:line-through;opacity:.55;margin-right:8px;">R$ 297</span>R$ 67 à vista · Pagamento único · Acesso imediato</p>
+  </div>
+</section>
+
+<footer>
+  &copy; Amanda Moita &middot; Obra 10X &middot; Todos os direitos reservados &middot;
+  <a href="#sobre">Sobre</a>
+</footer>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // Track InitiateCheckout no Meta Pixel quando clicar em qualquer CTA de compra
+  document.querySelectorAll('[data-checkout]').forEach(el => {
+    el.addEventListener('click', () => {
+      if (typeof fbq === 'function') {
+        fbq('track', 'InitiateCheckout', {
+          value: 67.00,
+          currency: 'BRL',
+          content_name: 'Obra 10X'
+        });
+      }
+    });
+  });
+</script>
+
+<!-- ============================================== -->
+<!-- ===== EXIT-INTENT POPUP (lead magnet Kit) ===== -->
+<!-- ============================================== -->
+<style>
+  :root {
+    --ei-bg: #FFFFFF;
+    --ei-bg-soft: #EFE9DF;
+    --ei-text: #1A1A1A;
+    --ei-muted: #6B6357;
+    --ei-accent: #B85C3D;
+    --ei-accent-hover: #9F4D32;
+    --ei-overlay: rgba(26, 26, 26, 0.72);
+    --ei-radius: 4px;
+    --ei-serif: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
+    --ei-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  #ei-overlay {
+    position: fixed; inset: 0;
+    background: var(--ei-overlay);
+    z-index: 999998; display: none;
+    align-items: center; justify-content: center;
+    padding: 20px;
+    animation: ei-fade-in 0.25s ease-out;
+  }
+  #ei-overlay.ei-open { display: flex; }
+  #ei-modal {
+    background: var(--ei-bg); color: var(--ei-text);
+    border-radius: var(--ei-radius);
+    max-width: 540px; width: 100%; max-height: 92vh;
+    overflow-y: auto; position: relative;
+    padding: 48px 40px 36px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+    animation: ei-slide-up 0.32s cubic-bezier(.2,.8,.2,1);
+    z-index: 999999; font-family: var(--ei-sans);
+  }
+  #ei-close {
+    position: absolute; top: 14px; right: 14px;
+    background: transparent; border: 0;
+    width: 36px; height: 36px; border-radius: 50%;
+    cursor: pointer; font-size: 24px;
+    color: var(--ei-muted); line-height: 1;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--ei-sans);
+    transition: background 0.15s, color 0.15s;
+  }
+  #ei-close:hover { background: var(--ei-bg-soft); color: var(--ei-text); }
+  #ei-modal .ei-eyebrow {
+    font-family: var(--ei-sans);
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ei-accent); margin: 0 0 18px;
+  }
+  #ei-modal h2 {
+    font-family: var(--ei-serif);
+    font-size: 32px; line-height: 1.15; font-weight: 500;
+    margin: 0 0 16px; color: var(--ei-text);
+    letter-spacing: -0.01em;
+  }
+  #ei-modal h2 em { font-style: italic; color: var(--ei-accent); font-weight: 500; }
+  #ei-modal p.ei-sub {
+    font-family: var(--ei-sans);
+    font-size: 16px; line-height: 1.55;
+    color: var(--ei-muted); margin: 0 0 28px;
+  }
+  #ei-form-slot { margin-top: 8px; }
+  #ei-form-slot .formkit-form {
+    box-shadow: none !important; padding: 0 !important;
+    background: transparent !important;
+    font-family: var(--ei-sans) !important;
+  }
+  #ei-form-slot .formkit-input {
+    font-family: var(--ei-sans) !important;
+    font-size: 16px !important;
+    padding: 14px 16px !important;
+    border-radius: var(--ei-radius) !important;
+  }
+  #ei-form-slot .formkit-submit {
+    font-family: var(--ei-sans) !important;
+    background: var(--ei-accent) !important;
+    border-color: var(--ei-accent) !important;
+    padding: 14px 20px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+    border-radius: var(--ei-radius) !important;
+    transition: background 0.18s !important;
+  }
+  #ei-form-slot .formkit-submit:hover {
+    background: var(--ei-accent-hover) !important;
+    border-color: var(--ei-accent-hover) !important;
+  }
+  #ei-footnote {
+    margin-top: 18px;
+    font-family: var(--ei-sans);
+    font-size: 12px; color: var(--ei-muted);
+    text-align: center; letter-spacing: 0.01em;
+  }
+  @keyframes ei-fade-in { from { opacity: 0 } to { opacity: 1 } }
+  @keyframes ei-slide-up {
+    from { opacity: 0; transform: translateY(24px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  @media (max-width: 480px) {
+    #ei-modal { padding: 36px 22px 28px; border-radius: 4px; }
+    #ei-modal h2 { font-size: 26px; }
+    #ei-modal p.ei-sub { font-size: 15px; }
+  }
+</style>
+
+<div id="ei-overlay" role="dialog" aria-modal="true" aria-labelledby="ei-headline" aria-hidden="true">
+  <div id="ei-modal">
+    <button id="ei-close" aria-label="Fechar">×</button>
+    <p class="ei-eyebrow">Espera — antes de sair</p>
+    <h2 id="ei-headline">Cansada de respostas <em>genéricas</em> da IA?</h2>
+    <p class="ei-sub">Leva grátis o guia completo pra parar de receber resposta de manual e começar a tirar do Claude (e do ChatGPT) o que ele realmente sabe sobre construção civil. Chega no seu email em 2 minutos.</p>
+    <div id="ei-form-slot"></div>
+    <p id="ei-footnote">Sem spam. Você cancela quando quiser.</p>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+  var STORAGE_KEY = 'ei_obra10x_seen';
+  var TTL_DAYS    = 7;
+  var KIT_UID     = '77737c3273';
+  var KIT_SRC     = 'https://amanda-moita.kit.com/' + KIT_UID + '/index.js';
+
+  var overlay  = document.getElementById('ei-overlay');
+  var modal    = document.getElementById('ei-modal');
+  var closeBtn = document.getElementById('ei-close');
+  var slot     = document.getElementById('ei-form-slot');
+  if (!overlay || !modal || !slot) return;
+
+  function hasSeen() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return false;
+      var ts = parseInt(raw, 10);
+      if (isNaN(ts)) return false;
+      var ageDays = (Date.now() - ts) / (1000 * 60 * 60 * 24);
+      return ageDays < TTL_DAYS;
+    } catch(e) { return false; }
+  }
+  function markSeen() {
+    try { localStorage.setItem(STORAGE_KEY, String(Date.now())); } catch(e) {}
+  }
+
+  var kitInjected = false;
+  function injectKitForm() {
+    if (kitInjected) return;
+    kitInjected = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.setAttribute('data-uid', KIT_UID);
+    s.src = KIT_SRC;
+    slot.appendChild(s);
+  }
+
+  var isOpen = false;
+  function openPopup() {
+    if (isOpen || hasSeen()) return;
+    isOpen = true;
+    markSeen();
+    injectKitForm();
+    overlay.classList.add('ei-open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    if (typeof window.fbq === 'function') {
+      try { window.fbq('trackCustom', 'ExitIntentShown', { source: 'obra10x_landing' }); } catch(e) {}
+    }
+    if (typeof window.gtag === 'function') {
+      try { window.gtag('event', 'exit_intent_shown', { source: 'obra10x_landing' }); } catch(e) {}
+    }
+  }
+  function closePopup() {
+    if (!isOpen) return;
+    isOpen = false;
+    overlay.classList.remove('ei-open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closePopup);
+  overlay.addEventListener('click', function(e) { if (e.target === overlay) closePopup(); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && isOpen) closePopup(); });
+
+  // ---------- TRIGGERS DE INTENÇÃO DE SAÍDA ----------
+  // Só dispara se o usuário REALMENTE estiver tentando sair da página.
+  // Não há fallback por tempo. Não dispara em scroll comum.
+
+  // Carência: ignora qualquer trigger nos primeiros 4s (movimentos involuntários ao chegar)
+  var GRACE_MS = 4000;
+  var pageEnteredAt = Date.now();
+  function pastGrace() { return (Date.now() - pageEnteredAt) > GRACE_MS; }
+
+  // ----- Desktop: mouse cruza a borda SUPERIOR rumo à barra de abas -----
+  function onDesktopMouseOut(e) {
+    if (!pastGrace()) return;
+    // 1) precisa estar saindo da janela (sem destino dentro do documento)
+    if (e.relatedTarget !== null || e.toElement !== null) return;
+    // 2) precisa estar cruzando o topo (não as laterais nem o rodapé)
+    if (e.clientY > 0) return;
+    // 3) precisa estar dentro da largura da viewport (evita laterais)
+    if (e.clientX < 0 || e.clientX > window.innerWidth) return;
+    openPopup();
+  }
+
+  // ----- Mobile: usuário troca de aba / minimiza / volta pro home -----
+  // Em mobile não existe "mouse saindo pelo topo" — o sinal de saída é a
+  // visibilidade da página mudar (back button, multitarefa, troca de aba).
+  function onVisibilityChange() {
+    if (!pastGrace()) return;
+    if (document.visibilityState === 'hidden') {
+      // Mostra o popup para quando o usuário voltar à aba
+      openPopup();
+    }
+  }
+
+  var isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+  if (isTouch) {
+    document.addEventListener('visibilitychange', onVisibilityChange);
+  } else {
+    document.addEventListener('mouseout', onDesktopMouseOut);
+  }
+})();
+</script>
+<!-- ===== /EXIT-INTENT POPUP ===== -->
+
+</body>
+</html>
